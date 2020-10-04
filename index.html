@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang= "ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./pages/index.css">        
+        <title>Место</title>
+    </head>
+    <body>
+        <div class='page'>
+            <header class='header'>
+                <img class='logo_place_header' src='./images/Vector.svg' alt='Логотип'>
+            </header>
+            <main class='content'>
+                <section class='profile'>
+                    <div class='avatar'>
+                        <img class='avatar__image' src='./images/Avatar.jpg' alt='Фото профиля'>
+                    </div>
+                    <div class='profile-info'>
+                        <h1 class='profile-info__title'>Жак-Ив Кусто</h1>
+                        <button class='edit-button'><img class='edit-button__image' src='./images/Edit-Button.svg' alt='Изменить'></button>
+                        <p class='profile-info__subtitle'>Исследователь океана</p>                        
+                    </div>
+                    <div class='add-button'><img class='add-button__image' src='./images/Add-Button.svg' alt='Добавить'></div>
+                </section>
+                <section class='elements'>
+                    <div class='element'>
+                        <img class='element__image' src='./images/kirill-pershin-1088404-unsplash.jpg' alt='Карачаевск'>
+                        <h2 class='element__title'>Карачаевск<img class='element__like-image' src='./images/heart.svg' alt='Нравится'></h2>
+                    </div>
+                    <div class='element'>
+                        <img class='element__image' src='./images/kirill-pershin-1404681-unsplash.jpg' alt='Эльбрус'>
+                        <h2 class='element__title'>Гора Эльбрус<img class='element__like-image' src='./images/heart.svg' alt='Нравится'></h2>
+                    </div>
+                    <div class='element'>
+                        <img class='element__image' src='./images/kirill-pershin-1556355-unsplash.jpg' alt='Домбай'>
+                        <h2 class='element__title'>Домбай<img class='element__like-image' src='./images/heart.svg' alt='Нравится'></h2>
+                    </div>
+                    <div class='element'>
+                        <img class='element__image' src='./images/kirill-pershin-1404681-unsplash.jpg' alt='Гора Эльбрус'>
+                        <h2 class='element__title'>Гора Эльбрус<img class='element__like-image' src='./images/heart.svg' alt='Нравится'></h2>
+                    </div>
+                    <div class='element'>
+                        <img class='element__image' src='./images/kirill-pershin-1556355-unsplash.jpg' alt='Домбай'>
+                        <h2 class='element__title'>Домбай<img class='element__like-image' src='./images/heart.svg' alt='Нравится'></h2>
+                    </div>
+                    <div class='element'>
+                        <img class='element__image' src='./images/kirill-pershin-1088404-unsplash.jpg' alt='Карачаевск'>
+                        <h2 class='element__title'>Карачаево-Черкеск<img class='element__like-image' src='./images/heart.svg' alt='Нравится'></h2>
+                    </div>
+                </section>
+            </main>
+            <footer class='footer'>
+                <p class='copyright'>&#169; 2020 Mesto Russia</p>
+            </footer>
+            <div class='popup'>
+                <form class='popup__container'>
+                    <img class='popup__close-button' src='./images/Close-Icon.svg' alt='Закрыть'>
+                    <div class='popup__main-container'>
+                        <h2 class='popup__title'>Редактировать профиль</h2>
+                    <fieldset class='edit-form'>                        
+                        <input class='edit-form__name' type='text' value='Жак-Ив Кусто'>
+                        <input class='edit-form__about-yourself' type='text' value='Исследователь океана'>
+                        <button class='edit-form__submit-button' type='submit'>Сохранить</button>
+                    </fieldset> 
+                    </div>                                   
+                </form>
+            </div>            
+        </div>
+        <script src="./scripts/index.js"></script>
+    </body>

@@ -1,0 +1,5 @@
+@media screen and (max-width:940px){
+    .add-button__image{
+       max-width: 80px;
+    }
+}

@@ -1,0 +1,25 @@
+.add-button{
+    margin-left: auto;    
+}
+.add-button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media screen and (max-width:940px){
+    .add-button{
+        border: white 2px solid;
+        height: 50px;
+        width: 80px;
+    }
+}
+@media screen and (max-width:700px){
+    .add-button{
+        margin:36px 0 0 0;
+        width: 88%;
+        min-height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
