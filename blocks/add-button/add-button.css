@@ -1,5 +1,14 @@
 .add-button{
-    margin-left: auto;    
+    margin-left: auto;
+    align-self: center;
+    background-image: url(../../images/Add-Button.svg);  
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: white 2px solid;
+    width: 150px;
+    height:50px;
+    padding: 0;
 }
 .add-button:hover{
     opacity: 0.6;
@@ -9,14 +18,15 @@
 @media screen and (max-width:940px){
     .add-button{
         border: white 2px solid;
-        height: 50px;
-        width: 80px;
+        height: 30px;
+        width: 30px;
+        background-size: 16px 16px;
     }
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:765px){
     .add-button{
         margin:36px 0 0 0;
-        width: 88%;
+        width: 282px;
         min-height: 50px;
         display: flex;
         justify-content: center;

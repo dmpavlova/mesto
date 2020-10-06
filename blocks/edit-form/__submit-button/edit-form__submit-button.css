@@ -8,10 +8,12 @@
     font-size: 18px;
     line-height: 1.2;
     margin-top: 48px;
+    border: none;
+    padding: 0;
 }
 
 .edit-form__submit-button:hover{
-    opacity: 0.6;
+    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -19,5 +21,6 @@
     .edit-form__submit-button{
         width: 238px;
         margin: 45px auto 0 auto;
+        font-size: 14px;
     }
 }

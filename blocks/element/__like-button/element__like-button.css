@@ -1,0 +1,12 @@
+.element__like-button{
+    background-image: url(../../../images/heart.svg);
+    background-repeat: no-repeat;
+    background-color: white;
+    padding: 0;
+    margin-right: 30px;
+    border: none;
+    width: 21px;
+    height: 18px;
+    align-self: center;
+    cursor: pointer
+}

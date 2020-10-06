@@ -6,12 +6,13 @@
     border:none;
     border-bottom: 1px solid rgba(0,0,0,0.2);
     margin-top: 54px;
+    padding-bottom: 13px;
 }
 
 @media screen and (max-width: 520px){
     .edit-form__name{
         width: 238px;
         margin-top: 75px;
-        margin-left: 50px;
+        margin-left: 20px;
     }
 }
