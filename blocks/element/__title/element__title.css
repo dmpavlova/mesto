@@ -10,5 +10,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 210px;    
+    max-width: 210px;  
+    border-radius: 0 0 10px 10px;  
 }
