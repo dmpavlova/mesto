@@ -1,0 +1,12 @@
+.popup__exit-button{
+    align-self: flex-end;
+    position: relative;
+    left: 37px;
+    margin: 0;  
+}
+
+@media screen and (max-width:320px){
+    .popup__exit-button{
+        height: 25px;
+    }
+}

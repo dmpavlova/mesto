@@ -22,54 +22,13 @@
                     <button class='add-button' type='button'></button>
                 </section>
                 <section class='elements'>
-                    <div class='element'>
-                        <img class='element__image' src='./images/kirill-pershin-1088404-unsplash.jpg' alt='Карачаевск'>
-                        <div class='element__container'>
-                            <h2 class='element__title'>Карачаевск</h2>
-                            <button class='element__like-button' type='button'></button>
-                        </div>                            
-                    </div>
-                    <div class='element'>
-                        <img class='element__image' src='./images/kirill-pershin-1404681-unsplash.jpg' alt='Эльбрус'>
-                        <div class='element__container'>
-                            <h2 class='element__title'>Гора Эльбрус</h2>
-                            <button class='element__like-button' type='button'></button>
-                        </div>                            
-                    </div>
-                    <div class='element'>
-                        <img class='element__image' src='./images/kirill-pershin-1556355-unsplash.jpg' alt='Домбай'>
-                        <div class='element__container'>
-                            <h2 class='element__title'>Домбай</h2>
-                            <button class='element__like-button' type='button'></button>
-                        </div>                            
-                    </div>
-                    <div class='element'>
-                        <img class='element__image' src='./images/kirill-pershin-1404681-unsplash.jpg' alt='Гора Эльбрус'>
-                        <div class='element__container'>
-                            <h2 class='element__title'>Гора Эльбрус</h2>
-                            <button class='element__like-button' type='button'></button>
-                        </div>                            
-                    </div>
-                    <div class='element'>
-                        <img class='element__image' src='./images/kirill-pershin-1556355-unsplash.jpg' alt='Домбай'>
-                        <div class='element__container'>
-                            <h2 class='element__title'>Домбай</h2>
-                            <button class='element__like-button' type='button'></button>
-                        </div>                            
-                    </div>
-                    <div class='element'>
-                        <img class='element__image' src='./images/kirill-pershin-1088404-unsplash.jpg' alt='Карачаевск'>
-                        <div class='element__container'>
-                            <h2 class='element__title'>Карачаево-Черкеск</h2>
-                            <button class='element__like-button' type='button'></button>
-                        </div>                            
-                    </div>                                           
+                                                   
                 </section>
             </main>
             <footer class='footer'>
                 <p class='copyright'>&#169; 2020 Mesto Russia</p>
             </footer>
-            <div class='popup'>
+            <div class='popup popup_profile'>
                 <div class='popup__container'>
                     <button class='popup__close-button' type='button'></button>
                     <div class='popup__main-container'>
@@ -77,14 +36,46 @@
                     <form class='form-container' method='post' name='editForm'>
                         <fieldset class='edit-form'>                        
                             <input class='edit-form__name' type='text' name='Name'>
-                            <input class='edit-form__about-yourself' type='text' name='Job'>
+                            <input class='edit-form__job' type='text' name='Job'>
                             <button class='edit-form__submit-button' type='submit'>Сохранить</button>
                         </fieldset> 
                     </form>                   
                     </div>                                   
                 </div>
-            </div>            
+            </div>  
+            <div class='popup popup_new-place'>
+                <div class='popup__container'>
+                    <button class='popup__close-button popup__button-close' type='button'></button>
+                    <div class='popup__main-container'>
+                        <h3 class='popup__title popup__title_place_new-place'>Новое место</h3>
+                    <form class='form-container' method='post' name='editForm'>
+                        <fieldset class='edit-form'>                        
+                            <input class='edit-form__name edit-form__place' type='text' name='Place-name' placeholder='Название'>
+                            <input class='edit-form__job edit-form__link' type='text' name='Adress' placeholder='Ссылка на картинку'>
+                            <button class='edit-form__submit-button edit-form__create-button' type='submit'>Создать</button>
+                        </fieldset> 
+                    </form>                   
+                    </div>                                   
+                </div>
+            </div> 
+            <div class='popup popup_fullscreen-image'>
+                <div class='popup__container'>
+                    <button class='popup__close-button popup__exit-button' type='button'></button>
+                    <img class='popup__image' src='./images/test.jpg' alt=''> 
+                    <h3 class='popup__title popup__title_place_fullscreen-image'></h3>
+                </div>
+            </div>         
         </div>
+        <template class='template'>
+            <div class='element'>
+                <batton class='element__remove-button' type='button'></batton>
+                <img class='element__image' src='' alt=''>
+                <div class='element__container'>
+                    <h2 class='element__title'></h2>
+                 <button class='element__like-button' type='button'></button>
+                </div>                            
+            </div>
+        </template>
         <script src="./scripts/index.js"></script>
     </body>
 </html>

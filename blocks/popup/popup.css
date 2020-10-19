@@ -5,6 +5,9 @@
     left:0;
     right:0;
     bottom: 0;
-    display:none;
-    justify-content:center;       
+    display:flex;
+    justify-content:center;    
+    opacity: 0; 
+    transition: 0.5s linear;
+    visibility: hidden;
 }

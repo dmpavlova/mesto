@@ -1,4 +1,4 @@
-.edit-form__about-yourself{
+.edit-form__job{
     width: 358px;
     font-weight: normal;
     font-size: 14px;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 520px){
-    .edit-form__about-yourself{
+    .edit-form__job{
         width: 238px;
         margin-left: 20px;
     }
