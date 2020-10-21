@@ -91,6 +91,7 @@ function addNewPlace(evt){
         link: linkImage.value
     })
     elements.prepend(item);
+    closePopup(newPlace);
 };
 
 
