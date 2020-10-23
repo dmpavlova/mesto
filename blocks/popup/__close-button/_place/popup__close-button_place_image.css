@@ -1,4 +1,4 @@
-.popup__exit-button{
+.popup__close-button_place_image{
     align-self: flex-end;
     position: relative;
     left: 37px;
@@ -6,7 +6,7 @@
 }
 
 @media screen and (max-width:320px){
-    .popup__exit-button{
+    .popup__close-button_place_image{
         height: 25px;
     }
 }
