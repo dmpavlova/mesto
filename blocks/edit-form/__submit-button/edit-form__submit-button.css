@@ -7,9 +7,15 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 1.2;
-    margin-top: 48px;
+    margin-top: 31px;
     border: none;
     padding: 0;
+}
+
+.edit-form__submit-button:disabled{
+    background-color: white;
+    color:rgba(0,0,0,0.2);
+    border:1px solid rgba(0,0,0,0.2);
 }
 
 .edit-form__submit-button:hover{

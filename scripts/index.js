@@ -18,7 +18,7 @@ const closeButtonImage = document.querySelector('.popup__close-button_place_imag
 const fullScrImage = document.querySelector('.popup_fullscreen-image');
 const popupImage = document.querySelector('.popup__image');
 const popupImageTitle = document.querySelector('.popup__title_place_fullscreen-image');
-
+const popups= Array.from(document.querySelectorAll('.popup'));
 
 const renderCards = () => {
     const places = initialCards.map(element => createCard(element));
@@ -95,6 +95,24 @@ function changeProfile (evt) {
 }
 
 
+function closeOnEsc (evt){
+    popups.forEach((popup) => {
+        if (evt.key === 'Escape'){
+            closePopup(popup); 
+        } 
+    })
+}
+
+function closeOnOverlay (evt){
+    popups.forEach((popup) => {
+        if(evt.target===evt.currentTarget){
+            closePopup(popup);
+        }
+    })
+}
+
+
+
 editButton.addEventListener('click', openProfile);
 closeButtonProfile.addEventListener('click', () => closePopup(popupProfile));
 formElement.addEventListener('submit', changeProfile);
@@ -102,3 +120,7 @@ addButton.addEventListener('click', () => openPopup(newPlace));
 closeButtonNewPlace.addEventListener('click', () => closePopup(newPlace));
 createButton.addEventListener('click', addNewPlace);
 closeButtonImage.addEventListener('click', () => closePopup(fullScrImage));
+document.addEventListener('keydown', closeOnEsc);
+popupProfile.addEventListener('click',closeOnOverlay);
+newPlace.addEventListener('click',closeOnOverlay);
+fullScrImage.addEventListener('click',closeOnOverlay);

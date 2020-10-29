@@ -33,13 +33,15 @@
                     <button class='popup__close-button popup__close-button_place_profile ' type='button'></button>
                     <div class='popup__main-container'>
                         <h3 class='popup__title'>Редактировать профиль</h3>
-                    <form class='form-container' method='post' name='editForm'>
+               <form class='form-container' method='post' name='editForm' novalidate>
                         <fieldset class='edit-form'>                        
-                            <input class='edit-form__name' type='text' name='Name'>
-                            <input class='edit-form__job' type='text' name='Job'>
+                            <input class='form-input edit-form__name' type='text' name='name' id='name' required minlength='2' maxlength='40'>
+                            <span class='form-error' id='name-error'></span>
+                            <input class='form-input edit-form__job' type='text' name='job' id='job' required minlength='2' maxlength='200'>
+                            <span class='form-error' id='job-error'></span>
                             <button class='edit-form__submit-button' type='submit'>Сохранить</button>
                         </fieldset> 
-                    </form>                   
+                    </form>                
                     </div>                                   
                 </div>
             </div>  
@@ -48,10 +50,12 @@
                     <button class='popup__close-button popup__close-button_place_new-place' type='button'></button>
                     <div class='popup__main-container'>
                         <h3 class='popup__title popup__title_place_new-place'>Новое место</h3>
-                    <form class='form-container' method='post' name='editForm'>
+                    <form class='form-container' method='post' name='newPlace' novalidate>
                         <fieldset class='edit-form'>                        
-                            <input class='edit-form__name edit-form__place' type='text' name='Place-name' placeholder='Название'>
-                            <input class='edit-form__job edit-form__link' type='text' name='Adress' placeholder='Ссылка на картинку'>
+                            <input class='form-input edit-form__name edit-form__place' type='text' name='place-name' id='place-name' placeholder='Название' required minlength='2' maxlength='30'>
+                            <span class='form-error' id='place-name-error'></span>
+                            <input class='form-input edit-form__job edit-form__link' type='url' name='adress' id='adress' placeholder='Ссылка на картинку' required>
+                            <span class='form-error' id='adress-error'></span>
                             <button class='edit-form__submit-button edit-form__create-button' type='submit'>Создать</button>
                         </fieldset> 
                     </form>                   
@@ -76,7 +80,8 @@
                 </div>                            
             </div>
         </template>
-        <script src='./scripts/define.js'></script>
+        <script src='./scripts/initialCards.js'></script>
+        <script src='./scripts/validate.js'></script>
         <script src='./scripts/index.js'></script>
     </body>
 </html>
