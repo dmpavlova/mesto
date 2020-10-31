@@ -74,10 +74,13 @@ function getLike (evt){
 
 function openPopup(popup){
     popup.classList.add('popup_opened');
+    document.addEventListener('keydown', closeOnEsc);
 }
 
 function closePopup(popup){
     popup.classList.remove('popup_opened');
+    document.removeEventListener('keydown', closeOnEsc);
+
 }
 
 function openProfile(){
@@ -96,19 +99,19 @@ function changeProfile (evt) {
 
 
 function closeOnEsc (evt){
-    popups.forEach((popup) => {
-        if (evt.key === 'Escape'){
-            closePopup(popup); 
-        } 
-    })
+    const popupOpened = document.querySelector('.popup_opened');
+    if (evt.key === 'Escape'){
+            closePopup(popupOpened); 
+        }
 }
 
+
 function closeOnOverlay (evt){
-    popups.forEach((popup) => {
-        if(evt.target===evt.currentTarget){
-            closePopup(popup);
+    const popupOpened = document.querySelector('.popup_opened');
+    if(evt.target===evt.currentTarget){
+            closePopup(popupOpened);
         }
-    })
+    
 }
 
 
@@ -120,7 +123,6 @@ addButton.addEventListener('click', () => openPopup(newPlace));
 closeButtonNewPlace.addEventListener('click', () => closePopup(newPlace));
 createButton.addEventListener('click', addNewPlace);
 closeButtonImage.addEventListener('click', () => closePopup(fullScrImage));
-document.addEventListener('keydown', closeOnEsc);
 popupProfile.addEventListener('click',closeOnOverlay);
 newPlace.addEventListener('click',closeOnOverlay);
 fullScrImage.addEventListener('click',closeOnOverlay);
