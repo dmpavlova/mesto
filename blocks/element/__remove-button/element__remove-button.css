@@ -6,6 +6,9 @@
     position: relative;
     left: 250px;
     top: 40px;
+    padding: 0;
+    border: none;
+    background-color:rgba(0,0,0,0);
  
 }
 .element__remove-button:hover{
