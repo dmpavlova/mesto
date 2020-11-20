@@ -1,78 +1,32 @@
-const popupProfile = document.querySelector('.popup_profile');
-const editButton = document.querySelector('.edit-button');
-const closeButtonProfile = document.querySelector('.popup__close-button_place_profile');
-const formElement = document.querySelector('.form-container');
-const nameInput = document.querySelector('.edit-form__name');
-const savedNameInput = document.querySelector('.profile-info__title');
-const jobInput = document.querySelector('.edit-form__job');
-const savedJobInput = document.querySelector('.profile-info__subtitle');
-const newPlace = document.querySelector('.popup_new-place');
-const addButton = document.querySelector('.add-button');
-const closeButtonNewPlace = document.querySelector('.popup__close-button_place_new-place');
-const place = document.querySelector('.edit-form__place');
-const linkImage = document.querySelector('.edit-form__link');
-const createButton = document.querySelector('.edit-form__create-button');
-const template = document.querySelector('.template');
-const elements = document.querySelector('.elements');
-const closeButtonImage = document.querySelector('.popup__close-button_place_image');
-const fullScrImage = document.querySelector('.popup_fullscreen-image');
-const popupImage = document.querySelector('.popup__image');
-const popupImageTitle = document.querySelector('.popup__title_place_fullscreen-image');
-const popups= Array.from(document.querySelectorAll('.popup'));
-
-const renderCards = () => {
-    const places = initialCards.map(element => createCard(element));
-    
-    elements.prepend(...places);
-
-};
-
-const removeCard = (event) => {
-    event.target.closest('.element').remove();
-};
+import {Card} from './card.js';
+import {initialCards} from './initialCards.js';
+import {popupProfile, editButton, closeButtonProfile, formElement, nameInput, savedNameInput, jobInput, savedJobInput,
+    newPlace,addButton, closeButtonNewPlace, place, linkImage, createButton, closeButtonImage, fullScrImage} from './constants.js'
 
 
-const createCard = (data) => {
-    const element = template.content.cloneNode(true);
-    const removeButton = element.querySelector('.element__remove-button');
-    const likeButton = element.querySelector('.element__like-button');
-    const elementImage = element.querySelector('.element__image');   
-    element.querySelector('.element__title').textContent = data.name;
-    elementImage.alt = data.name;
-    elementImage.src = data.link;
-    removeButton.addEventListener('click', removeCard);
-    likeButton.addEventListener('click', getLike);
+initialCards.forEach((item) => {
+	const card = new Card(item, '.template');
+	const cardElement = card.generateCard();
 
-    elementImage.addEventListener('click', (evt) => {
-        popupImage.src = evt.target.src;
-        popupImage.alt = evt.target.alt;
-        popupImageTitle.textContent = evt.target.alt;
-    
-        openPopup(fullScrImage);
-    });
-    
-    return element;
-};
+    document.querySelector('.elements').prepend(cardElement);
+});
 
 
 function addNewPlace(evt){
     evt.preventDefault();
-    const item = createCard({
+    const item = new Card({
         name: place.value,
         link: linkImage.value
-    })
-    elements.prepend(item);
+    }, '.template')
+    const itemElement = item.generateCard();
+
+    document.querySelector('.elements').prepend(itemElement);
+
     closePopup(newPlace);
 }
 
 
-renderCards();
-
-function getLike (evt){
-    evt.target.classList.toggle('element__like-button_active');
-}
-
-function openPopup(popup){
+export function openPopup(popup){
     popup.classList.add('popup_opened');
     document.addEventListener('keydown', closeOnEsc);
 }
