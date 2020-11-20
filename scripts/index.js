@@ -1,3 +1,4 @@
+import './validate.js';
 import {Card} from './card.js';
 import {initialCards} from './initialCards.js';
 import {popupProfile, editButton, closeButtonProfile, formElement, nameInput, savedNameInput, jobInput, savedJobInput,
