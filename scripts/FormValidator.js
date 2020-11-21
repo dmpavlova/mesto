@@ -3,6 +3,8 @@ export class FormValidator{
       this._settings = settings;
       this._formElement = formElement;
       this._input = this._formElement.querySelector(this._settings.inputSelector);
+      this._inputElements = Array.from(this._formElement.querySelectorAll(this._settings.inputSelector));
+      this._buttonElement = this._formElement.querySelector(this._settings.submitButtonSelector);
   }
 
   _showError(input) {
@@ -26,7 +28,6 @@ export class FormValidator{
   }
   
   _toggleButtonState() {
-    this._buttonElement = this._formElement.querySelector(this._settings.submitButtonSelector);
     if (this._formElement.checkValidity()) {
       this._buttonElement.classList.remove(this._settings.inactiveButtonClass)
       this._buttonElement.disabled = false;
@@ -37,9 +38,6 @@ export class FormValidator{
   }
   
   _setEventListeners() {
-      this._inputElements = Array.from(this._formElement.querySelectorAll(this._settings.inputSelector));
-      this._buttonElement = this._formElement.querySelector(this._settings.submitButtonSelector);
-  
       this._toggleButtonState();
   
       this._inputElements.forEach((input) => {

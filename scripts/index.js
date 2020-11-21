@@ -1,15 +1,14 @@
 import './validate.js';
 import {Card} from './card.js';
-import {initialCards} from './initialCards.js';
-import {popupProfile, editButton, closeButtonProfile, formElement, nameInput, savedNameInput, jobInput, savedJobInput,
-    newPlace,addButton, closeButtonNewPlace, place, linkImage, createButton, closeButtonImage, fullScrImage} from './constants.js'
+import {initialCards, popupProfile, editButton, closeButtonProfile, formElement, nameInput, savedNameInput, jobInput, savedJobInput,
+    newPlace,addButton, closeButtonNewPlace, place, linkImage, createButton, closeButtonImage, fullScrImage, elements} from './constants.js'
 
 
 initialCards.forEach((item) => {
 	const card = new Card(item, '.template');
 	const cardElement = card.generateCard();
 
-    document.querySelector('.elements').prepend(cardElement);
+    elements.prepend(cardElement);
 });
 
 
@@ -21,7 +20,7 @@ function addNewPlace(evt){
     }, '.template')
     const itemElement = item.generateCard();
 
-    document.querySelector('.elements').prepend(itemElement);
+    elements.prepend(itemElement);
 
     closePopup(newPlace);
 }
@@ -54,17 +53,16 @@ function changeProfile (evt) {
 
 
 function closeOnEsc (evt){
-    const popupOpened = document.querySelector('.popup_opened');
     if (evt.key === 'Escape'){
+        const popupOpened = document.querySelector('.popup_opened');
             closePopup(popupOpened); 
         }
 }
 
 
 function closeOnOverlay (evt){
-    const popupOpened = document.querySelector('.popup_opened');
     if(evt.target===evt.currentTarget){
-            closePopup(popupOpened);
+            closePopup(evt.currentTarget);
         }
     
 }

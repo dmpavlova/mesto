@@ -1,3 +1,29 @@
+export const initialCards = [
+    {
+        name: 'Архыз',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+        name: 'Челябинская область',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+        name: 'Иваново',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+        name: 'Камчатка',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+        name: 'Холмогорский район',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+        name: 'Байкал',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    }
+];
 export const popupProfile = document.querySelector('.popup_profile');
 export const editButton = document.querySelector('.edit-button');
 export const closeButtonProfile = document.querySelector('.popup__close-button_place_profile');
@@ -16,3 +42,4 @@ export const closeButtonImage = document.querySelector('.popup__close-button_pla
 export const fullScrImage = document.querySelector('.popup_fullscreen-image');
 export const popupImage = document.querySelector('.popup__image');
 export const popupImageTitle = document.querySelector('.popup__title_place_fullscreen-image');
+export const elements = document.querySelector('.elements');
