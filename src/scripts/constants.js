@@ -42,4 +42,16 @@ export const closeButtonImage = document.querySelector('.popup__close-button_pla
 export const fullScrImage = document.querySelector('.popup_fullscreen-image');
 export const popupImage = document.querySelector('.popup__image');
 export const popupImageTitle = document.querySelector('.popup__title_place_fullscreen-image');
+export const template = document.querySelector('.template');
 export const elements = document.querySelector('.elements');
+export const elementsValidation = {
+    formSelector: '.form-container',
+    inputSelector: '.form-input',
+    submitButtonSelector: '.edit-form__submit-button',
+    inactiveButtonClass: '.edit-form__submit-button:disabled',
+    inputErrorClass: '.form-input:disabled',
+    errorClass: '.form-error'
+  }
+
+export const profileVal = document.querySelector('.popup_profile').querySelector('.form-container');
+export const newPlaceVal = document.querySelector('.popup_new-place').querySelector('.form-container');
