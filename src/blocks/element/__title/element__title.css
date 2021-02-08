@@ -2,14 +2,14 @@
     box-sizing: border-box;
     margin: 0;
     background-color: white;
-    min-height: 80px;    
+    min-height: 80px;
     padding:25px 0 0 21px;
     font-size: 24px;
     line-height: 1.2;
-    font-weight: 900;    
+    font-weight: 900;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 210px;  
+    max-width: 210px;
     border-radius: 0 0 10px 10px;  
 }
