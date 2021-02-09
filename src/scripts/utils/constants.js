@@ -35,8 +35,6 @@ export const savedJobInput = document.querySelector('.profile-info__subtitle');
 export const newPlace = document.querySelector('.popup_new-place');
 export const addButton = document.querySelector('.add-button');
 export const closeButtonNewPlace = document.querySelector('.popup__close-button_place_new-place');
-export const place = document.querySelector('.edit-form__place');
-export const linkImage = document.querySelector('.edit-form__link');
 export const createButton = document.querySelector('.edit-form__create-button');
 export const closeButtonImage = document.querySelector('.popup__close-button_place_image');
 export const fullScrImage = document.querySelector('.popup_fullscreen-image');
@@ -49,7 +47,7 @@ export const elementsValidation = {
     inputSelector: '.form-input',
     submitButtonSelector: '.edit-form__submit-button',
     inactiveButtonClass: '.edit-form__submit-button:disabled',
-    inputErrorClass: '.form-input:disabled',
+    inputErrorClass: '.form-input:invalid',
     errorClass: '.form-error'
   }
 
